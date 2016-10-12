@@ -1,0 +1,8 @@
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\bin\Debug\MovieWS.ConsumerCmdSelf.exe.config
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\bin\Debug\MovieWS.ConsumerCmdSelf.exe
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\bin\Debug\MovieWS.ConsumerCmdSelf.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\obj\Debug\MovieWS.ConsumerCmdSelf.exe
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\obj\Debug\MovieWS.ConsumerCmdSelf.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\obj\Debug\MovieWS.ConsumerCmdSelf.csprojResolveAssemblyReference.cache
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\bin\Debug\MoviesWS.Contracts.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MovieWS.ConsumerCmdSelf\bin\Debug\MoviesWS.Contracts.pdb

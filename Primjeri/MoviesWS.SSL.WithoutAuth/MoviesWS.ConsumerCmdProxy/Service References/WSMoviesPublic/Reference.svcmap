@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="307d4966-e307-4071-8097-a7007687f9b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://dadamec-lp/MoviesWS.HostWeb/Public.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PublicService.wsdl" MetadataType="Wsdl" ID="e6fe84da-5a37-44e2-a44e-058834db9db4" SourceId="1" SourceUrl="https://dadamec-lp/MoviesWS.HostWeb/Public.svc?wsdl" />
+    <MetadataFile FileName="Public.disco" MetadataType="Disco" ID="4145abfc-de86-4bf4-b1ff-1f6e9c4da582" SourceId="1" SourceUrl="https://dadamec-lp/MoviesWS.HostWeb/Public.svc?disco" />
+    <MetadataFile FileName="Public.xsd" MetadataType="Schema" ID="731966f4-fbb4-4b0f-9b33-0ce297f28f23" SourceId="1" SourceUrl="https://dadamec-lp/MoviesWS.HostWeb/Public.svc?xsd=xsd1" />
+    <MetadataFile FileName="Public1.xsd" MetadataType="Schema" ID="2414ace9-eded-4eb7-a3c4-d8349fd08812" SourceId="1" SourceUrl="https://dadamec-lp/MoviesWS.HostWeb/Public.svc?xsd=xsd0" />
+    <MetadataFile FileName="Public2.xsd" MetadataType="Schema" ID="47f3f250-76ec-4b9d-9345-b0644bf86f38" SourceId="1" SourceUrl="https://dadamec-lp/MoviesWS.HostWeb/Public.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
