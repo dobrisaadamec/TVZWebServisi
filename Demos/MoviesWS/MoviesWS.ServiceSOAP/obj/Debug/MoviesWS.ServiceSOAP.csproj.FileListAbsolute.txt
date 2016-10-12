@@ -1,0 +1,5 @@
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll.config
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.dll
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.pdb
