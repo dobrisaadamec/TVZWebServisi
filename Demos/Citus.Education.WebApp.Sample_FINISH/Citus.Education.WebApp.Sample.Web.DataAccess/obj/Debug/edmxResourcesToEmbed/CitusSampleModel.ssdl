@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Citus.Education.WebApp.SampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CvCompetences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="RateId" Type="int" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CvCompetencesGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="CvCompetencesRates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="512" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CvCompetences_CvCompetencesGroups">
+    <End Role="CvCompetencesGroups" Type="Self.CvCompetencesGroups" Multiplicity="1" />
+    <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CvCompetencesGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetences">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CvCompetences_CvCompetencesRates">
+    <End Role="CvCompetencesRates" Type="Self.CvCompetencesRates" Multiplicity="1" />
+    <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CvCompetencesRates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetences">
+        <PropertyRef Name="RateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CvCompetences_Persons">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetences">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CitusEducationWebAppSampleModelStoreContainer">
+    <EntitySet Name="CvCompetences" EntityType="Self.CvCompetences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvCompetencesGroups" EntityType="Self.CvCompetencesGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CvCompetencesRates" EntityType="Self.CvCompetencesRates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CvCompetences_CvCompetencesGroups" Association="Self.FK_CvCompetences_CvCompetencesGroups">
+      <End Role="CvCompetencesGroups" EntitySet="CvCompetencesGroups" />
+      <End Role="CvCompetences" EntitySet="CvCompetences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CvCompetences_CvCompetencesRates" Association="Self.FK_CvCompetences_CvCompetencesRates">
+      <End Role="CvCompetencesRates" EntitySet="CvCompetencesRates" />
+      <End Role="CvCompetences" EntitySet="CvCompetences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CvCompetences_Persons" Association="Self.FK_CvCompetences_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="CvCompetences" EntitySet="CvCompetences" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

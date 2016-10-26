@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Citus.Education.WebApp.SampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CvCompetence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="RateId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CvCompetencesGroup" Relationship="Self.FK_CvCompetences_CvCompetencesGroups" FromRole="CvCompetences" ToRole="CvCompetencesGroups" />
+    <NavigationProperty Name="CvCompetencesRate" Relationship="Self.FK_CvCompetences_CvCompetencesRates" FromRole="CvCompetences" ToRole="CvCompetencesRates" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons" FromRole="CvCompetence" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="CvCompetencesGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CvCompetences" Relationship="Self.FK_CvCompetences_CvCompetencesGroups" FromRole="CvCompetencesGroups" ToRole="CvCompetences" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CvCompetencesRate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CvCompetences" Relationship="Self.FK_CvCompetences_CvCompetencesRates" FromRole="CvCompetencesRates" ToRole="CvCompetences" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_CvCompetences_CvCompetencesGroups">
+    <End Role="CvCompetencesGroups" Type="Self.CvCompetencesGroup" Multiplicity="1" />
+    <End Role="CvCompetences" Type="Self.CvCompetence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CvCompetencesGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetences">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CvCompetences_CvCompetencesRates">
+    <End Role="CvCompetencesRates" Type="Self.CvCompetencesRate" Multiplicity="1" />
+    <End Role="CvCompetences" Type="Self.CvCompetence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CvCompetencesRates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetences">
+        <PropertyRef Name="RateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CvCompetences" EntityType="Self.CvCompetence" />
+    <EntitySet Name="CvCompetencesGroups" EntityType="Self.CvCompetencesGroup" />
+    <EntitySet Name="CvCompetencesRates" EntityType="Self.CvCompetencesRate" />
+    <AssociationSet Name="FK_CvCompetences_CvCompetencesGroups" Association="Self.FK_CvCompetences_CvCompetencesGroups">
+      <End Role="CvCompetencesGroups" EntitySet="CvCompetencesGroups" />
+      <End Role="CvCompetences" EntitySet="CvCompetences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CvCompetences_CvCompetencesRates" Association="Self.FK_CvCompetences_CvCompetencesRates">
+      <End Role="CvCompetencesRates" EntitySet="CvCompetencesRates" />
+      <End Role="CvCompetences" EntitySet="CvCompetences" />
+    </AssociationSet>
+    <EntitySet Name="Persons" EntityType="Citus.Education.WebApp.SampleModel.Person" />
+    <AssociationSet Name="FK_CvCompetences_Persons" Association="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons">
+      <End Role="Person" EntitySet="Persons" />
+      <End Role="CvCompetence" EntitySet="CvCompetences" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CvCompetences" Relationship="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons" FromRole="Person" ToRole="CvCompetence" />
+  </EntityType>
+  <Association Name="FK_CvCompetences_Persons">
+    <End Type="Citus.Education.WebApp.SampleModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="Citus.Education.WebApp.SampleModel.CvCompetence" Role="CvCompetence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CvCompetence">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
