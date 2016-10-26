@@ -11,3 +11,9 @@ E:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample_FINISH\Citus.Ed
 E:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Debug\Citus.Education.WebApp.Sample.Common.csprojResolveAssemblyReference.cache
 E:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Debug\Citus.Education.WebApp.Sample.Common.dll
 E:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Debug\Citus.Education.WebApp.Sample.Common.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\bin\Debug\Citus.Education.WebApp.Sample.Common.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\bin\Debug\Citus.Education.WebApp.Sample.Common.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\bin\Debug\Elmah.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\bin\Debug\System.Data.SqlServerCe.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Debug\Citus.Education.WebApp.Sample.Common.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Debug\Citus.Education.WebApp.Sample.Common.pdb
