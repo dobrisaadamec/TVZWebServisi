@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +47,10 @@
       <HintPath>..\packages\Elmah.MVC.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=0.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.0.9.6\lib\net45\Microsoft.Rest.ClientRuntime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Mvc.JQuery.Datatables.Core">
       <HintPath>..\packages\Mvc.JQuery.Datatables.Core.1.3.14\lib\net45\Mvc.JQuery.Datatables.Core.dll</HintPath>
     </Reference>
@@ -56,6 +61,14 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -65,6 +78,10 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -177,6 +194,32 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Account.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\AccountExtensions.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\CitusEducationWebAppSampleWebAPI.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\CitusEducationWebAppSampleWebAPIExtensions.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\CV.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\CVExtensions.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\IAccount.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\ICitusEducationWebAppSampleWebAPI.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\ICV.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\IValues.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\AddExternalLoginBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\ChangePasswordBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\CvCompetenceModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\CvCompetenceModelCollection.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\ExternalLoginViewModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\ExternalLoginViewModelCollection.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\ManageInfoViewModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\RegisterBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\RegisterExternalBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\RemoveLoginBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\SetPasswordBindingModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\StringCollection.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\UserInfoViewModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Models\UserLoginInfoViewModel.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\Values.cs" />
+    <Compile Include="Citus.Education.WebApp.Sample.WebAPI\ValuesExtensions.cs" />
     <Compile Include="Code\Binders\DataTablesModelBinder.cs" />
     <Compile Include="Code\Constansts.cs" />
     <Compile Include="Controllers\AccountController.cs" />

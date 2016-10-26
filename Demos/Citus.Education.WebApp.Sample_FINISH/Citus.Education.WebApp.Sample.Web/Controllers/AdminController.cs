@@ -77,7 +77,7 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                CvCompetenceModel editModel = model.TranslateTo<CvCompetenceModel>();
+                Sample.Models.CvCompetenceModel editModel = model.TranslateTo<Sample.Models.CvCompetenceModel>();
                 var result = CvCompetencesManager.Save(editModel);
 
                 if (result.ActionSucceed == true)

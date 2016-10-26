@@ -16,6 +16,10 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
 
         public virtual ActionResult About()
         {
+            CitusEducationWebAppSampleWebAPI c = new CitusEducationWebAppSampleWebAPI();
+
+            var result = c.CV.Get();
+
             ViewBag.Message = "Your application description page.";
 
             return View();
