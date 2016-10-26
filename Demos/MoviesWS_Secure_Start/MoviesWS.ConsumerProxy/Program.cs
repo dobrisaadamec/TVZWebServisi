@@ -13,6 +13,8 @@ namespace MoviesWS.ConsumerProxy
         {
             WSMovies.PublicClient proxy = new WSMovies.PublicClient();
 
+            proxy.ClientCredentials.UserName.UserName = "user1";
+            proxy.ClientCredentials.UserName.Password = "123456";
             try
             {
                 var result = proxy.GetMovie2(2,"");

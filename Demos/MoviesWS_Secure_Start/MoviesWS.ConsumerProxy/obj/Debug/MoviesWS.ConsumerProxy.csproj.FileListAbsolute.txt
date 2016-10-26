@@ -3,3 +3,9 @@ e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.Con
 e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.pdb
 e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.exe
 e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.exe.config
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.exe
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.exe
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.csprojResolveAssemblyReference.cache

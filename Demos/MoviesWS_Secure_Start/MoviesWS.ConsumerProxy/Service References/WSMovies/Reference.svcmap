@@ -21,10 +21,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1985/Public.svc?singleWsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://dadamec-lp//MoviesWS.HostWeb/Public.svc?singleWsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Public.wsdl" MetadataType="Wsdl" ID="136671bb-977b-471f-92ab-26b48af6feec" SourceId="1" SourceUrl="http://localhost:1985/Public.svc?singleWsdl" />
+    <MetadataFile FileName="Public1.wsdl" MetadataType="Wsdl" ID="b5a76dea-d2ab-4a0e-b156-227be40b95c6" SourceId="1" SourceUrl="https://dadamec-lp//MoviesWS.HostWeb/Public.svc?singleWsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

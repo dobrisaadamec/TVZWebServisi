@@ -58,7 +58,6 @@
     <None Include="Service References\WSMovies\MoviesWS.ConsumerProxy.WSMovies.Movie.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WSMovies\Public.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -73,6 +72,7 @@
     <None Include="Service References\WSMovies\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\WSMovies\Public1.wsdl" />
     <None Include="Service References\WSMovies\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

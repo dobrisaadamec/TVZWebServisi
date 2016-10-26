@@ -1,0 +1,9 @@
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\Citus.Education.WebApp.Sample.Web.DataAccess.dll.config
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\Citus.Education.WebApp.Sample.Web.DataAccess.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\Citus.Education.WebApp.Sample.Web.DataAccess.pdb
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\EntityFramework.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\EntityFramework.xml
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Debug\Citus.Education.WebApp.Sample.Web.DataAccess.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Debug\Citus.Education.WebApp.Sample.Web.DataAccess.pdb

@@ -1,0 +1,219 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.IO" #>
+<#
+
+SqlConnection conn = new SqlConnection();
+string connEdukacija = "Data Source=.\\SQLExpress;Initial Catalog=Citus.Education.WebApp.Sample;Integrated Security=SSPI";
+string context = "Entities";
+
+using (conn = new SqlConnection(connEdukacija))
+{
+    conn.Open();
+
+    //tabele
+    DataTable dt = conn.GetSchema("tables");
+    //za svaku tabelu iz baze
+    foreach (DataRow r in dt.Rows)
+    {
+	WriteLine("using System;");
+	WriteLine("using System.Collections.Generic;");
+	WriteLine("using System.Linq;");
+	WriteLine("using System.Text;");
+	WriteLine("using System.Collections;");
+	WriteLine("using System.Threading.Tasks;");
+	WriteLine("using KaFotka.Helpers;");
+	WriteLine("");
+	WriteLine("");
+
+        string imetabele = r["TABLE_NAME"].ToString();
+		
+		string imeklase = imetabele.Replace("_","") + "Actions";
+
+        //header klase
+        WriteLine("namespace KaFotka.DAL");
+        WriteLine("{");
+
+        PushIndent("	");
+        WriteLine("public class " + imeklase);
+        WriteLine("{");
+
+        PushIndent("	");
+        
+		#>
+		/// <summary>
+        /// Dohvati iz baze sa opcijama za paging
+        /// </summary>
+        /// <param name="pagecount">koliko na stranici</param>
+        /// <param name="pageindex">koja stranica po redu</param>
+        /// <returns></returns>
+		public List<<#=imetabele #>> GetAll(int pagecount, int pageindex)
+        {
+            List<<#=imetabele #>> lista = null;
+
+            using (<#=context #> data = new <#=context #>())
+            {
+                var items = data.<#=imetabele #>.Where(r => r.Deleted == false).OrderBy(r => r.Id).Skip(pagecount * (pageindex-1)).Take(pagecount);
+                lista = items.ToList();
+            }
+
+            return lista;
+        }
+
+		/// <summary>
+        /// dohvati jedan po primary key-u
+        /// </summary>
+        /// <param name="guid"></param>
+        /// <returns></returns>
+        public <#=imetabele #> Get(int Id) {
+            <#=imetabele #> item = null;
+
+            using (<#=context #> data = new <#=context #>())
+            {
+                item = data.<#=imetabele #>.Where(r => r.Id == Id).FirstOrDefault();
+            }
+
+            return item;
+        }
+
+		 /// <summary>
+        /// spremi item
+        /// insert ako nema Id
+        /// update ako ima Id
+        /// </summary>
+        /// <param name="item">instanca entity objekta</param>
+        /// <returns></returns>
+        public bool Save(<#=imetabele #> item)
+        {
+            bool uspjelo = false;
+
+            using (<#=context #>  data = new <#=context #> ())
+            {
+                data.<#=imetabele #>.Add(item);
+                //ako ima Id onda je update
+                if (item.Id != null)
+                {
+                    data.Entry<<#=imetabele #>>(item).State = System.Data.EntityState.Modified;
+                }
+
+                data.SaveChanges();
+
+                uspjelo = true;
+            }
+
+            return uspjelo;
+        }
+
+		/// <summary>
+        /// obriši item
+        /// nije brisanje već postavljanje Deleted polja na true
+        /// </summary>
+        /// <param name="item">instanca entity objekta</param>
+        /// <returns></returns>
+        public bool Delete(<#=imetabele #> item)
+        {
+            bool uspjelo = false;
+
+            using (KaFotkaEntities data = new KaFotkaEntities())
+            {
+                item.Deleted = true;
+				data.Entry<<#=imetabele #>>(item).State = System.Data.EntityState.Modified;
+                data.SaveChanges();
+
+                uspjelo = true;
+            }
+
+            return uspjelo;
+        }
+
+		<#
+        
+        PopIndent();
+        WriteLine("}");
+
+        PopIndent();
+        WriteLine("}");
+
+        SaveOutput(imeklase + ".cs", "GeneriraneAkcije");
+    }
+
+   
+
+}
+#>
+
+
+<#+
+static string PodesiTipPodatka(string ulaznitip)
+{
+    string izlaznitip = ulaznitip;
+    switch (ulaznitip)
+    {
+        case "nvarchar":
+            {
+                izlaznitip = "string";
+                break;
+            }
+        case "varchar":
+            {
+                izlaznitip = "string";
+                break;
+            }
+        case "datetime":
+            {
+                izlaznitip = "DateTime";
+                break;
+            }
+        case "date":
+            {
+                izlaznitip = "DateTime";
+                break;
+            }
+        case "bit":
+            {
+                izlaznitip = "bool";
+                break;
+            }
+		case "uniqueidentifier":
+            {
+                izlaznitip = "Guid";
+                break;
+            }
+		case "money":
+            {
+                izlaznitip = "decimal";
+                break;
+            }
+		case "real":
+            {
+                izlaznitip = "double";
+                break;
+            }
+		case "varbinary":
+            {
+                izlaznitip = "byte[]";
+                break;
+            }
+        default:
+            break;
+    }
+
+    return izlaznitip;
+}
+
+void SaveOutput(string outputFileName, string outputSubFolder)
+{
+    string templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+    string outputDirectory = Path.Combine(templateDirectory,outputSubFolder);
+    string outputFilePath = Path.Combine(outputDirectory, outputFileName);
+    File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+}
+
+#>

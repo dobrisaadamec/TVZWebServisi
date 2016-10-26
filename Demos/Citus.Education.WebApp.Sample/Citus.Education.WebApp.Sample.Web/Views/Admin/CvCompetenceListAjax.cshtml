@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "CvCompetenceListAjax";
+}
+
+@section Scripts{
+    <script>
+        var viewname = "CvCompetenceListAjax";
+        var ajaxPath = '@Url.Action(MVC.Admin.ActionNames.GetCvCompetenceListAjax)';
+        var editPath = '@Url.Action(MVC.Admin.ActionNames.CvCompetenceEdit)';
+    </script>
+    @Scripts.Render("~/bundles/views")
+}
+
+<h2>CvCompetenceListAjax</h2>
+<div>
+    <table id="dtCvCompetenceList" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="no-sort">Code</th>
+                <th class="no-sort">Name</th>
+                <th class="no-sort">Description</th>
+                <th class="no-sort">Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+

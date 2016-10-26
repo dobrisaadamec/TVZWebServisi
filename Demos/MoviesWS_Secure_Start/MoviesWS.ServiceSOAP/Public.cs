@@ -15,7 +15,7 @@ namespace MoviesWS.ServiceSOAP
         {
             //throw new FaultException(new FaultReason("neka greška"));
             Thread.Sleep(100);
-            return new Movie { Id = 1, Name = "Ništa", Year = 2016 };
+            return new Movie { Id = 1, Name = "Mrak film", Year = 2016 };
 
             
 

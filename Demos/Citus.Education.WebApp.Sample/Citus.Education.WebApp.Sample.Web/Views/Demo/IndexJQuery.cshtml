@@ -1,0 +1,40 @@
+﻿@model Citus.Education.WebApp.Sample.Models.ViewModels.CvCompetenceEditViewModel
+
+@{
+    ViewBag.Title = "DEMO index";
+}
+
+<h1>@ViewBag.Name</h1>
+<br /><br /><br /><br />
+<a href="JavaScript:pokreni()">Pokreni</a>
+<div id="divLoader" style="display:none">
+    <img src="~/Content/loader.gif" />
+</div>
+<div id="divDetalji">ovdje je div u kojem će se nešto učitati</div>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        var trazim = $("#divDetalji");
+        var htmlOdElementa = trazim.html();
+        console.log(htmlOdElementa);
+        trazim.html("AAAAAAAAAAAA");
+        
+    });
+    var id = 2;
+    function pokreni() {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "@Url.Action("GetItem","Admin")",
+            data: JSON.stringify(nesto),
+        contentType: "application/json;" +
+            "charset=utf-8",
+        success: function (data) {
+            $("#divDetalji").html("Odgovor: " + " " + data.Id + " " +  data.Name + " " + data.Description);
+        },
+        failure: function (data) {
+            alert(msg);
+        }
+    });
+    }
+</script>

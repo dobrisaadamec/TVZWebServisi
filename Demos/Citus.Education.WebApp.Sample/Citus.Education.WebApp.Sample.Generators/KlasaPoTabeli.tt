@@ -1,0 +1,165 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.IO" #>
+<#
+
+SqlConnection conn = new SqlConnection();
+string connEdukacija = "Data Source=.\\SQLExpress;Initial Catalog=Citus.Education.WebApp.Sample;Integrated Security=SSPI";
+
+
+using (conn = new SqlConnection(connEdukacija))
+{
+    conn.Open();
+
+    //tabele
+    DataTable dt = conn.GetSchema("tables");
+    //za svaku tabelu iz baze
+    foreach (DataRow r in dt.Rows)
+    {
+	WriteLine("using System;");
+	WriteLine("using System.Collections.Generic;");
+	WriteLine("using System.Linq;");
+	WriteLine("using System.Text;");
+	WriteLine("using System.Collections;");
+	WriteLine("");
+	WriteLine("");
+
+        string imetabele = r["TABLE_NAME"].ToString();
+		
+		string imeklase = imetabele.Replace("_","") + "Tip";
+
+        //header klase
+        WriteLine("namespace KaFotka.BLL ");
+        WriteLine("{");
+
+        PushIndent("	");
+        WriteLine("public partial class " + imeklase);
+        WriteLine("{");
+
+        PushIndent("	");
+        WriteLine("//default konstruktor");
+        WriteLine("public " + imeklase + "() { }");
+        
+        
+        //kolone iz tabele
+        DataTable dtcolumns = conn.GetSchema("columns", new[] { "KaFotka", null, imetabele });
+
+        //konstruktor sa poljima
+        //kontruktor
+        //niz parametara
+        string nizparametara = String.Empty;
+        //postavljanje parametara
+        string initparametara = String.Empty;
+        foreach (DataRow c in dtcolumns.Rows)
+        {
+            nizparametara += PodesiTipPodatka(c["DATA_TYPE"].ToString()) + " " + c["COLUMN_NAME"].ToString().ToLower() + ", ";
+            initparametara += "     this." + c["COLUMN_NAME"].ToString() + " = " + c["COLUMN_NAME"].ToString().ToLower() + ";" + System.Environment.NewLine;
+        }
+
+        WriteLine("");
+        WriteLine("//puni konstruktor");
+
+        WriteLine("public " + imeklase + "(" + nizparametara.TrimEnd(' ').TrimEnd(',') + ")");
+        WriteLine("{");
+        WriteLine(initparametara);
+        WriteLine("}");
+        WriteLine("");
+
+        WriteLine("//svojstva");
+		//za svaku kolonu za imena property-a
+        foreach (DataRow c in dtcolumns.Rows)
+        {
+            string propertynamevalue = PodesiTipPodatka(c["DATA_TYPE"].ToString()) + " " + c["COLUMN_NAME"].ToString();
+            WriteLine("public " + propertynamevalue + "{ get; set;}");
+        }
+        
+
+        PopIndent();
+        WriteLine("}");
+
+        PopIndent();
+        WriteLine("}");
+
+        SaveOutput(imeklase + ".cs", "GeneriraniModel");
+    }
+
+   
+
+}
+#>
+
+
+<#+
+static string PodesiTipPodatka(string ulaznitip)
+{
+    string izlaznitip = ulaznitip;
+    switch (ulaznitip)
+    {
+        case "nvarchar":
+            {
+                izlaznitip = "string";
+                break;
+            }
+        case "varchar":
+            {
+                izlaznitip = "string";
+                break;
+            }
+        case "datetime":
+            {
+                izlaznitip = "DateTime";
+                break;
+            }
+        case "date":
+            {
+                izlaznitip = "DateTime";
+                break;
+            }
+        case "bit":
+            {
+                izlaznitip = "bool";
+                break;
+            }
+		case "uniqueidentifier":
+            {
+                izlaznitip = "Guid";
+                break;
+            }
+		case "money":
+            {
+                izlaznitip = "decimal";
+                break;
+            }
+		case "real":
+            {
+                izlaznitip = "double";
+                break;
+            }
+		case "varbinary":
+            {
+                izlaznitip = "byte[]";
+                break;
+            }
+        default:
+            break;
+    }
+
+    return izlaznitip;
+}
+
+void SaveOutput(string outputFileName, string outputSubFolder)
+{
+    string templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+    string outputDirectory = Path.Combine(templateDirectory,outputSubFolder);
+    string outputFilePath = Path.Combine(outputDirectory, outputFileName);
+    File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+}
+
+#>
