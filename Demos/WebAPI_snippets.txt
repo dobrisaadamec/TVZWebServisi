@@ -1,0 +1,51 @@
+-- JSON za text/html - za browser
+config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html") );
+
+
+-- jQuery poziv za Index.html ili veæ
+<a id="btnPokreni">Pokreni</a>
+
+<div id="divDetalji">ovdje je div u kojem æe se nešto uèitati</div>
+@section scripts {
+    <script language="JavaScript">
+        $(function () {
+            $('#btnPokreni').click(function () {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "api/cv",
+                    //data: {id : 2},
+                    contentType: "application/json;" +
+                        "charset=utf-8",
+                    success: function (data) {
+                        $("#divDetalji").html("Odgovor: " + data.length);
+                        //$("#divDetalji").html("Odgovor: " + " " + data.Id + " " +  data.Name + " " + data.Description);
+                    },
+                    failure: function (data) {
+                        alert(msg);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+-- CORS
+Install-Package Microsoft.AspNet.WebApi.Cors
+
+globalno:
+var cors = new EnableCorsAttribute("http://localhost", "*", "*");
+config.EnableCors(cors);
+
+ili po controllerima/akcijama atributatima
+[EnableCors(.......]
+
+-- swagger 
+Install-Package Swashbuckle -Version 5.4.0
+
+-- add web acpi client
+ CitusEducationWebAppSampleWebAPI c = new CitusEducationWebAppSampleWebAPI();
+
+            var result = c.CV.Get();
+
+ 
