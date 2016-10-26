@@ -1,0 +1,4 @@
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.SQLScripts\bin\Release\Citus.Education.WebApp.Sample.SQLScripts.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.SQLScripts\bin\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb

@@ -1,0 +1,8 @@
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\bin\Debug\MoviesWS_cmdhost.exe.config
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\obj\Debug\MoviesWS_cmdhost.csprojResolveAssemblyReference.cache
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\bin\Debug\MoviesWS_cmdhost.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\bin\Debug\MoviesWS_cmdhost.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\bin\Debug\MoviesWS.SOAPService.dll
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\bin\Debug\MoviesWS.SOAPService.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\obj\Debug\MoviesWS_cmdhost.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS_cmdhost\obj\Debug\MoviesWS_cmdhost.pdb

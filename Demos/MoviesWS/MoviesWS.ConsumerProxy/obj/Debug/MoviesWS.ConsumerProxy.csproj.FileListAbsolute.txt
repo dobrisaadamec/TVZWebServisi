@@ -1,0 +1,5 @@
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.exe.config
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\bin\Debug\MoviesWS.ConsumerProxy.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ConsumerProxy\obj\Debug\MoviesWS.ConsumerProxy.pdb

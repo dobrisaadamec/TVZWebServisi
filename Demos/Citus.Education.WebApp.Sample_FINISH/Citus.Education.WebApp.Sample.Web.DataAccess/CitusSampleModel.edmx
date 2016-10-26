@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Citus.Education.WebApp.SampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CvCompetences">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="RateId" Type="int" Nullable="false" />
+          <Property Name="PersonId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CvCompetencesGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CvCompetencesRates">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Persons">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="512" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CvCompetences_CvCompetencesGroups">
+          <End Role="CvCompetencesGroups" Type="Self.CvCompetencesGroups" Multiplicity="1" />
+          <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CvCompetencesGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetences">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CvCompetences_CvCompetencesRates">
+          <End Role="CvCompetencesRates" Type="Self.CvCompetencesRates" Multiplicity="1" />
+          <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CvCompetencesRates">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetences">
+              <PropertyRef Name="RateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CvCompetences_Persons">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+          <End Role="CvCompetences" Type="Self.CvCompetences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetences">
+              <PropertyRef Name="PersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CitusEducationWebAppSampleModelStoreContainer">
+          <EntitySet Name="CvCompetences" EntityType="Self.CvCompetences" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CvCompetencesGroups" EntityType="Self.CvCompetencesGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CvCompetencesRates" EntityType="Self.CvCompetencesRates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CvCompetences_CvCompetencesGroups" Association="Self.FK_CvCompetences_CvCompetencesGroups">
+            <End Role="CvCompetencesGroups" EntitySet="CvCompetencesGroups" />
+            <End Role="CvCompetences" EntitySet="CvCompetences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CvCompetences_CvCompetencesRates" Association="Self.FK_CvCompetences_CvCompetencesRates">
+            <End Role="CvCompetencesRates" EntitySet="CvCompetencesRates" />
+            <End Role="CvCompetences" EntitySet="CvCompetences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CvCompetences_Persons" Association="Self.FK_CvCompetences_Persons">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="CvCompetences" EntitySet="CvCompetences" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Citus.Education.WebApp.SampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CvCompetence">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="RateId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CvCompetencesGroup" Relationship="Self.FK_CvCompetences_CvCompetencesGroups" FromRole="CvCompetences" ToRole="CvCompetencesGroups" />
+          <NavigationProperty Name="CvCompetencesRate" Relationship="Self.FK_CvCompetences_CvCompetencesRates" FromRole="CvCompetences" ToRole="CvCompetencesRates" />
+          <Property Name="PersonId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons" FromRole="CvCompetence" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="CvCompetencesGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CvCompetences" Relationship="Self.FK_CvCompetences_CvCompetencesGroups" FromRole="CvCompetencesGroups" ToRole="CvCompetences" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CvCompetencesRate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CvCompetences" Relationship="Self.FK_CvCompetences_CvCompetencesRates" FromRole="CvCompetencesRates" ToRole="CvCompetences" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_CvCompetences_CvCompetencesGroups">
+          <End Role="CvCompetencesGroups" Type="Self.CvCompetencesGroup" Multiplicity="1" />
+          <End Role="CvCompetences" Type="Self.CvCompetence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CvCompetencesGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetences">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CvCompetences_CvCompetencesRates">
+          <End Role="CvCompetencesRates" Type="Self.CvCompetencesRate" Multiplicity="1" />
+          <End Role="CvCompetences" Type="Self.CvCompetence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CvCompetencesRates">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetences">
+              <PropertyRef Name="RateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CvCompetences" EntityType="Self.CvCompetence" />
+          <EntitySet Name="CvCompetencesGroups" EntityType="Self.CvCompetencesGroup" />
+          <EntitySet Name="CvCompetencesRates" EntityType="Self.CvCompetencesRate" />
+          <AssociationSet Name="FK_CvCompetences_CvCompetencesGroups" Association="Self.FK_CvCompetences_CvCompetencesGroups">
+            <End Role="CvCompetencesGroups" EntitySet="CvCompetencesGroups" />
+            <End Role="CvCompetences" EntitySet="CvCompetences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CvCompetences_CvCompetencesRates" Association="Self.FK_CvCompetences_CvCompetencesRates">
+            <End Role="CvCompetencesRates" EntitySet="CvCompetencesRates" />
+            <End Role="CvCompetences" EntitySet="CvCompetences" />
+          </AssociationSet>
+          <EntitySet Name="Persons" EntityType="Citus.Education.WebApp.SampleModel.Person" />
+          <AssociationSet Name="FK_CvCompetences_Persons" Association="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="CvCompetence" EntitySet="CvCompetences" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CvCompetences" Relationship="Citus.Education.WebApp.SampleModel.FK_CvCompetences_Persons" FromRole="Person" ToRole="CvCompetence" />
+        </EntityType>
+        <Association Name="FK_CvCompetences_Persons">
+          <End Type="Citus.Education.WebApp.SampleModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="Citus.Education.WebApp.SampleModel.CvCompetence" Role="CvCompetence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CvCompetence">
+              <PropertyRef Name="PersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CitusEducationWebAppSampleModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="CvCompetences">
+            <EntityTypeMapping TypeName="Citus.Education.WebApp.SampleModel.CvCompetence">
+              <MappingFragment StoreEntitySet="CvCompetences">
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="RateId" ColumnName="RateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CvCompetencesGroups">
+            <EntityTypeMapping TypeName="Citus.Education.WebApp.SampleModel.CvCompetencesGroup">
+              <MappingFragment StoreEntitySet="CvCompetencesGroups">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CvCompetencesRates">
+            <EntityTypeMapping TypeName="Citus.Education.WebApp.SampleModel.CvCompetencesRate">
+              <MappingFragment StoreEntitySet="CvCompetencesRates">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persons">
+            <EntityTypeMapping TypeName="Citus.Education.WebApp.SampleModel.Person">
+              <MappingFragment StoreEntitySet="Persons">
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

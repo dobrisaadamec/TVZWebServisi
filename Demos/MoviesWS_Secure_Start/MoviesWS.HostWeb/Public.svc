@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="MoviesWS.ServiceSOAP.Public" 
+    CodeBehind="Public.svc.cs" %>

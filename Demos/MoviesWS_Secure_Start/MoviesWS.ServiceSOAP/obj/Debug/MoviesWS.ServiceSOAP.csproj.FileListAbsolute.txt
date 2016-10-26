@@ -1,0 +1,11 @@
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll.config
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.dll
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Demos\MoviesWS\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll.config
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Debug\MoviesWS.ServiceSOAP.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.csprojResolveAssemblyReference.cache
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\obj\Debug\MoviesWS.ServiceSOAP.pdb

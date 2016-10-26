@@ -1,0 +1,5 @@
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Release\MoviesWS.ServiceSOAP.dll.config
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Release\MoviesWS.ServiceSOAP.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\bin\Release\MoviesWS.ServiceSOAP.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\obj\Release\MoviesWS.ServiceSOAP.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\MoviesWS_Secure_Start\MoviesWS.ServiceSOAP\obj\Release\MoviesWS.ServiceSOAP.pdb

@@ -1,0 +1,8 @@
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS.Contracts\bin\Debug\MoviesWS.Contracts.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS.Contracts\bin\Debug\MoviesWS.Contracts.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS.Contracts\obj\Debug\MoviesWS.Contracts.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS\MoviesWS.Contracts\obj\Debug\MoviesWS.Contracts.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.Contracts\bin\Debug\MoviesWS.Contracts.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.Contracts\bin\Debug\MoviesWS.Contracts.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.Contracts\obj\Debug\MoviesWS.Contracts.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.Contracts\obj\Debug\MoviesWS.Contracts.pdb

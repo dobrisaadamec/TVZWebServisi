@@ -1,0 +1,5 @@
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.ConsumerCmdProxy\bin\Debug\MoviesWS.ConsumerCmdProxy.exe.config
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.ConsumerCmdProxy\bin\Debug\MoviesWS.ConsumerCmdProxy.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.ConsumerCmdProxy\bin\Debug\MoviesWS.ConsumerCmdProxy.pdb
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.ConsumerCmdProxy\obj\Debug\MoviesWS.ConsumerCmdProxy.exe
+e:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\Primjeri\MoviesWS.Auth.UsernamePassword\MoviesWS.ConsumerCmdProxy\obj\Debug\MoviesWS.ConsumerCmdProxy.pdb

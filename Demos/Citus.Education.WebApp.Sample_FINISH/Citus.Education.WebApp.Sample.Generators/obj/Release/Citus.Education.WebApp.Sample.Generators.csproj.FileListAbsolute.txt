@@ -1,0 +1,5 @@
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.dll.config
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.pdb
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.dll
+e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.pdb
