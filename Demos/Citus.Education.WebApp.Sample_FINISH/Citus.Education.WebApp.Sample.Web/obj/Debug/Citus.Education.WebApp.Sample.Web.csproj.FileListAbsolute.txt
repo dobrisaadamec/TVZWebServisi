@@ -226,5 +226,8 @@ E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Educatio
 E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web\bin\System.Web.Http.xml
 E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web\bin\Microsoft.Rest.ClientRuntime.dll
 E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web\bin\Microsoft.Rest.ClientRuntime.xml
+<<<<<<< HEAD
 E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web\bin\Citus.Education.WebApp.Sample.Web.dll.CodeAnalysisLog.xml
 E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web\bin\Citus.Education.WebApp.Sample.Web.dll.lastcodeanalysissucceeded
+=======
+>>>>>>> d5d9bd7aabb87b518e64254b58d293543bdec62b
