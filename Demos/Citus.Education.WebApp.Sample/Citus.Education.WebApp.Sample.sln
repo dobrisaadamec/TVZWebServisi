@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citus.Education.WebApp.Sample.Web", "Citus.Education.WebApp.Sample.Web\Citus.Education.WebApp.Sample.Web.csproj", "{A32F63BE-5492-4399-B2BC-D9A7D6D0CBBD}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citus.Education.WebApp.Sample.Generators", "Citus.Education.WebApp.Sample.Generators\Citus.Education.WebApp.Sample.Generators.csproj", "{98EA058E-FE89-4252-9057-D53753B78D08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AC3244AD-E20E-48DF-960C-DEADAED16383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citus.Education.WebApp.Sample.WebAPI", "Citus.Education.WebApp.Sample.WebAPI\Citus.Education.WebApp.Sample.WebAPI.csproj", "{CE2039AB-422F-4E5D-A953-57F36B5DB5C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{98EA058E-FE89-4252-9057-D53753B78D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98EA058E-FE89-4252-9057-D53753B78D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98EA058E-FE89-4252-9057-D53753B78D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE2039AB-422F-4E5D-A953-57F36B5DB5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2039AB-422F-4E5D-A953-57F36B5DB5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2039AB-422F-4E5D-A953-57F36B5DB5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2039AB-422F-4E5D-A953-57F36B5DB5C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

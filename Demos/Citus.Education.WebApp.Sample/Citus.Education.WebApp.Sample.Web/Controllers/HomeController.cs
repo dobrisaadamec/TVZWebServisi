@@ -1,4 +1,5 @@
 ﻿using Citus.Education.WebApp.Sample.Web.Code;
+using Citus.Education.WebApp.Sample.Web.WebAPIClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
     {
         public virtual ActionResult Index()
         {
+            CitusEducationWebAppSampleWebAPI proxy = new CitusEducationWebAppSampleWebAPI();
+            var list = proxy.CV.Get();
             return View();
         }
 
