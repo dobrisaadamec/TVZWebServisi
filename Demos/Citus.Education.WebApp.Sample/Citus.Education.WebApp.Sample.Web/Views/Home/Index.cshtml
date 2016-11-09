@@ -48,3 +48,32 @@
         </p>
     </div>
 </div>
+
+<a id="btnPokreni">Pokreni</a>
+
+<div id="divDetalji">ovdje je div u kojem će se nešto učitati</div>
+@section scripts {
+    <script language="JavaScript">
+        $(function () {
+            $('#btnPokreni').click(function () {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "http://localhost:2167/api/cv",
+                    //data: {id : 2},
+                    contentType: "application/json;" +
+                        "charset=utf-8",
+                    success: function (data) {
+                        $("#divDetalji").html("Odgovor: " + data.length);
+                        //$("#divDetalji").html("Odgovor: " + " " + data.Id + " " +  data.Name + " " + data.Description);
+                    },
+                    failure: function (data) {
+                        alert(msg);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

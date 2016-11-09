@@ -3,3 +3,8 @@ e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education
 e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Debug\Citus.Education.WebApp.Sample.Generators.pdb
 e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Debug\Citus.Education.WebApp.Sample.Generators.dll
 e:\Predavanja\ASPNET_MVC_Education\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Debug\Citus.Education.WebApp.Sample.Generators.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Debug\Citus.Education.WebApp.Sample.Generators.dll.config
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Debug\Citus.Education.WebApp.Sample.Generators.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\bin\Debug\Citus.Education.WebApp.Sample.Generators.pdb
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Debug\Citus.Education.WebApp.Sample.Generators.dll
+E:\Predavanja\TVZ\04_Specijalisticki\2016\Predavanja\GitHub\Demos\Citus.Education.WebApp.Sample\Citus.Education.WebApp.Sample.Generators\obj\Debug\Citus.Education.WebApp.Sample.Generators.pdb
